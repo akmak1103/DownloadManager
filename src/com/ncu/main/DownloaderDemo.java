@@ -22,8 +22,10 @@ public class DownloaderDemo
 		obj.path = scan.nextLine();
 		boolean isPathOk = validPath.checkPath(obj.path);
 		
+		System.out.println("Enter the filename: ");
+		obj.fName = scan.nextLine();		
 
 		if (isFileURLOk && isPathOk)
-		obj.downloader(); 	
+		obj.downloadFile(obj.url,obj.path,obj.fName);
 	}
 }
