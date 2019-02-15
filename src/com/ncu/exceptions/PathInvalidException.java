@@ -3,6 +3,6 @@ public class PathInvalidException extends Exception
 {
 	public PathInvalidException(String s)
 	{
-		super(s);
+		super("Path is INVALID...");
 	}
 }

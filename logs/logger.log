@@ -1,0 +1,218 @@
+2019-02-14 14:31:40 ERROR URLValidator:38 - no protocol: dhfdh
+2019-02-14 14:31:48 ERROR PathValidator:19 - 
+
+com.ncu.exceptions.PathInvalidException: null
+2019-02-14 14:32:51 ERROR URLValidator:38 - no protocol: dfhdg
+2019-02-14 14:32:53 ERROR PathValidator:20 - 
+
+com.ncu.exceptions.PathInvalidException: null
+2019-02-14 21:24:07 ERROR URLValidator:38 - unknown protocol: c
+2019-02-14 21:24:12 ERROR PathValidator:20 - 
+
+com.ncu.exceptions.PathInvalidException: null
+2019-02-14 21:29:54 ERROR URLValidator:38 - 
+
+no protocol: abcd
+
+
+2019-02-14 21:30:03 ERROR PathValidator:20 - 
+
+com.ncu.exceptions.PathInvalidException: null
+2019-02-14 21:34:06 ERROR PathValidator:20 - 
+
+com.ncu.exceptions.PathInvalidException: null
+2019-02-14 21:34:21 ERROR URLValidator:38 - 
+
+no protocol: fdsg
+
+
+2019-02-14 21:34:52 ERROR URLValidator:38 - 
+
+no protocol: gffd
+
+
+2019-02-14 21:35:04 ERROR PathValidator:20 - 
+
+com.ncu.exceptions.PathInvalidException: null
+2019-02-14 21:40:05 ERROR URLValidator:38 - 
+
+no protocol: fgdg
+
+
+2019-02-14 21:40:06 ERROR PathValidator:20 - 
+
+com.ncu.exceptions.PathInvalidException: Path is INVALID...null
+2019-02-14 21:42:57 ERROR URLValidator:38 - 
+
+no protocol: eggdf
+
+
+2019-02-14 21:43:00 ERROR PathValidator:20 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID...null
+2019-02-14 21:44:37 ERROR URLValidator:38 - 
+
+no protocol: trghd
+
+
+2019-02-14 21:44:39 ERROR PathValidator:20 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID...null
+
+2019-02-14 21:45:56 ERROR URLValidator:38 - 
+no protocol: ghdfs
+
+2019-02-14 21:45:59 ERROR PathValidator:20 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID...null
+
+2019-02-14 21:54:45 ERROR URLValidator:42 - 
+no protocol: dffhdsds
+
+2019-02-14 21:54:50 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 21:59:39 ERROR URLValidator:42 - 
+no protocol: fgsg
+
+2019-02-14 21:59:43 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:02:49 ERROR URLValidator:42 - 
+no protocol: fghhg
+
+2019-02-14 22:02:54 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:03:18 ERROR URLValidator:42 - 
+no protocol: gg
+
+2019-02-14 22:03:19 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:03:25 ERROR URLValidator:42 - 
+no protocol: dfg
+
+2019-02-14 22:03:26 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:04:49 ERROR URLValidator:42 - 
+no protocol: ghsgsg
+
+2019-02-14 22:04:50 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:05:43 ERROR URLValidator:42 - 
+no protocol: ggsh
+
+2019-02-14 22:05:44 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:09:51 ERROR URLValidator:42 - 
+no protocol: dghghhs
+
+2019-02-14 22:09:53 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:10:01 ERROR URLValidator:42 - 
+no protocol: 
+
+2019-02-14 22:11:31 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:13:26 ERROR URLValidator:42 - 
+no protocol: gsgsfgsg
+
+2019-02-14 22:13:29 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:13:33 ERROR URLValidator:42 - 
+no protocol: 
+
+2019-02-14 22:13:36 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:13:39 ERROR URLValidator:42 - 
+no protocol: 
+
+2019-02-14 22:13:41 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:14:46 ERROR URLValidator:42 - 
+no protocol: shs
+
+2019-02-14 22:14:49 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:15:01 ERROR URLValidator:42 - 
+no protocol: hfsssgfd
+
+2019-02-14 22:15:05 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:15:09 ERROR URLValidator:42 - 
+no protocol: sfdhdsg
+
+2019-02-14 22:15:12 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:15:16 ERROR URLValidator:42 - 
+no protocol: sfsdsg
+
+2019-02-14 22:15:17 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:18:55 ERROR URLValidator:42 - 
+no protocol: dhgfghh
+
+2019-02-14 22:18:59 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:19:12 ERROR URLValidator:42 - 
+no protocol: dghdhfd
+
+2019-02-14 22:19:14 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:19:59 ERROR URLValidator:42 - 
+no protocol: dghfghh
+
+2019-02-14 22:20:00 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:20:18 ERROR URLValidator:42 - 
+no protocol: gfhdhhdd
+
+2019-02-14 22:20:19 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:20:49 ERROR URLValidator:42 - 
+no protocol: dhjdhj
+
+2019-02-14 22:20:50 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:20:56 ERROR URLValidator:42 - 
+no protocol: hdhrh
+
+2019-02-14 22:20:56 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:20:59 ERROR URLValidator:42 - 
+no protocol: tyty
+
+2019-02-14 22:21:00 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-14 22:21:04 ERROR URLValidator:42 - 
+no protocol: dyyh
+
+2019-02-14 22:21:04 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-15 01:58:15 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+
+2019-02-15 02:07:06 ERROR URLValidator:42 - 
+no protocol: www.google.com
+
+2019-02-15 02:07:10 ERROR PathValidator:23 - 
+com.ncu.exceptions.PathInvalidException: Path is INVALID..."Oops, the destination path entered does not exist ...!!"
+

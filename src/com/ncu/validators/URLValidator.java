@@ -1,12 +1,12 @@
 package com.ncu.validators;
 import com.ncu.exceptions.*;
+import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.HttpURLConnection; 
 import java.util.*;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.*;
 
 // Java program to validate an url in Java
 public class URLValidator
@@ -14,9 +14,13 @@ public class URLValidator
 	public boolean checkURL(String srcurl)
 	{
 		Properties prop = new Properties();
+		FileInputStream input = null;
 		Logger logger = Logger.getLogger(URLValidator.class);
+		PropertyConfigurator.configure("C:\\Users\\Akshay\\Desktop\\DownloadManager\\configs\\logger\\logger.properties");
 		try
 		{
+			input = new FileInputStream("C:\\Users\\Akshay\\Desktop\\DownloadManager\\configs\\constants\\exceptions.properties");
+			prop.load(input);
 			new URL(srcurl).toURI();
 			urlExist(srcurl);
 		}
@@ -24,26 +28,27 @@ public class URLValidator
 
 		catch (URISyntaxException e)		// if URL cannot be converted into URI
 		{
-			logger.error(e.getMessage());
+			logger.error("\n"+e.getMessage()+"\n");
 			return false;
 		}
 		catch (URLException e)
 		{
-			logger.error("\n\n"+e+prop.getProperty("urlDoesNotExistMessage"+"\n\n"));
+			logger.error("\n"+e+(prop.getProperty("urlDoesNotExistMessage")));
         	return false;
 		}
 		
 		catch (MalformedURLException e) 	// if protocol or address given in the url is incorrect
 		{
-			logger.error(e.getMessage());
+			logger.error("\n"+e.getMessage()+"\n");
 			return false;
 		}
 
-		/*catch (Exception e)
+		catch (Exception e) 	
 		{
-			logger.error(e.getMessage());
+			logger.error("\n"+e.getMessage()+"\n");
 			return false;
-		}*/
+		}
+		
 		return true;
 	}
 	

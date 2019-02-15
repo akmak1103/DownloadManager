@@ -36,13 +36,13 @@ public class Downloader extends JFrame
 			java.io.BufferedOutputStream bout = new BufferedOutputStream(fos,1024);
  			byte[] data = new byte[1024]; 
 			int i=0;
-			 while((i=in.read(data,0,1024))>=0)
-			 { 
-					totalDataRead=totalDataRead+i;
-			 		bout.write(data,0,i);
-			 		float Percent=(totalDataRead*100)/filesize; 
-					current.setValue((int)Percent);
-			 }
+			while((i=in.read(data,0,1024))>=0)
+			{ 
+				totalDataRead=totalDataRead+i;
+			 	bout.write(data,0,i);
+			 	float Percent=(totalDataRead*100)/filesize; 
+				current.setValue((int)Percent);
+			}
 			bout.close(); 
 			in.close(); 
 		}
