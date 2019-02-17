@@ -21,16 +21,21 @@ public class DownloadedFile
 	public String getSize(String sourceURL)
 	{
 		long s = 0;
+		HttpURLConnection connection = null;
 		try
 		{
 			URL url=new URL(sourceURL);
- 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+ 			connection = (HttpURLConnection) url.openConnection();
  			s = connection.getContentLength();
  			s = (Long) s/1024;
  		}
  		catch (Exception e)
  		{
  			e.printStackTrace();
+ 		}
+ 		finally
+ 		{
+ 			connection.disconnect();
  		}
  		return (Long.toString(s)+"MB");
 	}

@@ -55,15 +55,20 @@ public class URLValidator
 	public void urlExist (String url) throws URLException
 	{
 		int responseCode=0;
+		HttpURLConnection huc = null;
 		try
 		{
 			URL urlfinal = new URL(url);
-			HttpURLConnection huc = (HttpURLConnection) urlfinal.openConnection();
+			huc = (HttpURLConnection) urlfinal.openConnection();
 			responseCode = huc.getResponseCode();
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
+		}
+		finally
+		{
+			huc.disconnect();
 		}
 		if (responseCode == 404)
 		{

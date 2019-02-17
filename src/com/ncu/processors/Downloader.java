@@ -1,4 +1,4 @@
-package com.ncu.processors;
+/*package com.ncu.processors;
 import java.awt.FlowLayout;
 import java.io.*; 
 import java.net.HttpURLConnection;
@@ -49,6 +49,70 @@ public class Downloader extends JFrame
 		catch(Exception e)
 		{
 			javax.swing.JOptionPane.showConfirmDialog((java.awt.Component) null,e.getMessage(), "Error", javax.swing.JOptionPane.DEFAULT_OPTION); 
+		}
+	}
+}*/
+
+package com.ncu.processors;
+import java.util.Collections;
+import java.awt.FlowLayout;
+import java.io.*; 
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class Downloader
+
+{
+	public String url;
+	public String path;
+	public String fName;
+
+	public static final void downloadFile(String sourceURL,String path,String name)
+	{ 
+		String site=sourceURL;
+		String filename=(path+"\\"+name);
+		BufferedInputStream in = null;
+		HttpURLConnection connection = null;
+		BufferedOutputStream bout = null;
+		try
+		{ 
+			URL url=new URL(site);
+ 			connection = (HttpURLConnection) url.openConnection();
+ 			int filesize = connection.getContentLength(); 
+			float totalDataRead=0;
+ 			in = new BufferedInputStream(connection.getInputStream());
+ 			FileOutputStream fos = new FileOutputStream(filename); 
+			bout = new BufferedOutputStream(fos,1024);
+ 			byte[] data = new byte[1024]; 
+			int i=0;
+			System.out.println("::Progress::");
+			while((i=in.read(data,0,1024))>=0)
+			 { 
+					totalDataRead=totalDataRead+i;
+			 		bout.write(data,0,i);
+			 		int Percent=(int)((totalDataRead*100)/filesize);
+			 		System.out.print("\r"+Percent+"%");
+			}
+			bout.close(); 
+			in.close(); 
+		}
+		catch(Exception e)
+		{
+			javax.swing.JOptionPane.showConfirmDialog((java.awt.Component) null,e.getMessage(), "Error", javax.swing.JOptionPane.DEFAULT_OPTION); 
+		}
+
+		finally
+		{
+			try
+			{
+				bout.close();
+				in.close();
+				connection.disconnect();
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+			}
 		}
 	}
 }

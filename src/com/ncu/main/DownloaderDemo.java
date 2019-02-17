@@ -8,55 +8,55 @@ public class DownloaderDemo
 {
 	public static void main(String[] args)
 	{
-		int choice = 0;
-		int count = 0;
 		Downloader obj = new Downloader();
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.println("\n\n-------------------------------\n-------------------------------");
-		System.out.println("Welcome to Download Manager");
-		System.out.println("-------------------------------\n-------------------------------\n\n");
+		System.out.println("\n\n\t\t\t\t\t\t-------------------------------\n\t\t\t\t\t\t-------------------------------");
+		System.out.println("\t\t\t\t\t\t  Welcome to Download Manager");
+		System.out.println("\t\t\t\t\t\t-------------------------------\n\t\t\t\t\t\t-------------------------------\n\n");
 
-		do
+		System.out.print("Enter the URL of file to be downloaded:  ");
+		URLValidator validURL = new URLValidator();
+		obj.url = scan.nextLine();
+		System.out.println();
+		boolean isFileURLOk = validURL.checkURL(obj.url);
+
+		System.out.println("Downloaded file should be saved to?\t1.Default Path\t2.Custom Path\nEnter your choice:");
+		int choice = scan.nextInt();
+		boolean isPathOk = true;
+		switch (choice)
 		{
-			count += 1;
-			System.out.print("Enter the URL of file to be downloaded:  ");
-			URLValidator validURL = new URLValidator();
-			if (!(count==1)){scan.nextLine();}
-			obj.url = scan.nextLine();
-			System.out.println();
-			boolean isFileURLOk = validURL.checkURL(obj.url);
-
-
+			case 2:
 			System.out.print("Enter the destination folder for the downloaded file:  ");
 			PathValidator validPath = new PathValidator();
 			obj.path = scan.nextLine();
 			System.out.println();
-			boolean isPathOk = validPath.checkPath(obj.path);
-		
-			System.out.print("Enter the filename (with EXTENSION):  ");
-			obj.fName = scan.nextLine();		
+			isPathOk = validPath.checkPath(obj.path);
+			break;
 
-			if (isFileURLOk && isPathOk)
-			{
-				obj.downloadFile(obj.url,obj.path,obj.fName);
-				System.out.println("\n\nDownload will begin now :)");
-			}
-
-			ListAppender updateCSV = new ListAppender();
-			updateCSV.CSVwriter(obj.fName,obj.path,obj.url);
-
-			System.out.print("\n\nDo you want to download another file??");
-			System.out.print("\t\tPress '1' for YES");
-			System.out.println("\t\tPress '0' for NO");
-			choice = scan.nextInt();
-			System.out.println("\n\n");
+			case 1:
+			obj.path = "C:\\Users\\Akshay\\Desktop\\DownloadManager\\downloads";
+			break;
 		}
-		while (choice==1);
+		
+		System.out.print("Enter the filename :  "); scan.nextLine();
+		obj.fName = scan.nextLine();
+		String extension = (obj.url.substring((obj.url.lastIndexOf("."))));
+		obj.fName = obj.fName+extension;
 
-		System.out.println("\n\n-------------------------------------------\n-------------------------------------------");
-		System.out.println("Thank You for using our application :) :)");
-		System.out.println("-------------------------------------------\n-------------------------------------------");
+		if (isFileURLOk && isPathOk)
+		{
+			System.out.println("\nDownload will begin now :)\n");
+			obj.downloadFile(obj.url,obj.path,obj.fName);
+		}
+
+		ListAppender updateCSV = new ListAppender();
+		updateCSV.CSVwriter(obj.fName,obj.path,obj.url);
+
+		System.out.println("\n\nFile has been successfully downloaded to "+obj.path);
+		System.out.println("\n\n\t\t\t\t\t-------------------------------------------\n\t\t\t\t\t-------------------------------------------");
+		System.out.println("\t\t\t\t\t Thank You for using our application :) :)");
+		System.out.println("\t\t\t\t\t-------------------------------------------\n\t\t\t\t\t-------------------------------------------");
 
 	}
 }

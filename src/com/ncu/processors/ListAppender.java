@@ -6,7 +6,6 @@ public class ListAppender
 {
 	public void CSVwriter (String fName,String location, String srcURl)
 	{
-    	final String LINE_SEPARATOR = "\n";
     	DownloadedFile dFile = new DownloadedFile (fName,location,srcURl);
 
     	FileWriter fileWriter = null;
@@ -29,7 +28,6 @@ public class ListAppender
     		}
     		catch(IOException ie)
     		{
-    			System.out.println("Error occured while closing the fileWriter");
     			ie.printStackTrace();
     		}
     	}
