@@ -1,3 +1,8 @@
+/*
+Author: Aashima, Aditya, Akshay, Anmol Nagpal, Anmol Sarpal
+Project: Download Manager
+*/
+
 package com.ncu.main;
 import java.util.*;
 import java.io.*;
@@ -11,16 +16,21 @@ public class DownloaderDemo
 		Downloader obj = new Downloader();
 		Scanner scan = new Scanner(System.in);
 		
+		//intro
+
 		System.out.println("\n\n\t\t\t\t\t\t-------------------------------\n\t\t\t\t\t\t-------------------------------");
 		System.out.println("\t\t\t\t\t\t  Welcome to Download Manager");
 		System.out.println("\t\t\t\t\t\t-------------------------------\n\t\t\t\t\t\t-------------------------------\n\n");
 
+		//URL validation
 		System.out.print("Enter the URL of file to be downloaded:  ");
 		URLValidator validURL = new URLValidator();
 		obj.url = scan.nextLine();
 		System.out.println();
 		boolean isFileURLOk = validURL.checkURL(obj.url);
 
+
+		//Path validation
 		System.out.println("Downloaded file should be saved to?\t1.Default Path\t2.Custom Path\nEnter your choice:");
 		int choice = scan.nextInt();
 		boolean isPathOk = true;
@@ -39,11 +49,17 @@ public class DownloaderDemo
 			break;
 		}
 		
+
+
 		System.out.print("Enter the filename :  "); scan.nextLine();
 		obj.fName = scan.nextLine();
 		String extension = (obj.url.substring((obj.url.lastIndexOf("."))));
 		obj.fName = obj.fName+extension;
 
+
+
+
+		//downloads file if both validations are true
 		if (isFileURLOk && isPathOk)
 		{
 			System.out.println("\nDownload will begin now :)\n");
@@ -51,9 +67,8 @@ public class DownloaderDemo
 		}
 
 		ListAppender updateCSV = new ListAppender();
-		updateCSV.CSVwriter(obj.fName,obj.path,obj.url);
+		updateCSV.CSVwriter(obj.fName,obj.path,obj.url);		//for writing to CSV file 'ListOfDownloads.csv'
 
-		System.out.println("\n\nFile has been successfully downloaded to "+obj.path);
 		System.out.println("\n\n\t\t\t\t\t-------------------------------------------\n\t\t\t\t\t-------------------------------------------");
 		System.out.println("\t\t\t\t\t Thank You for using our application :) :)");
 		System.out.println("\t\t\t\t\t-------------------------------------------\n\t\t\t\t\t-------------------------------------------");

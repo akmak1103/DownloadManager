@@ -1,3 +1,8 @@
+/*
+Author: Aashima, Aditya, Akshay, Anmol Nagpal, Anmol Sarpal
+Project: Download Manager
+*/
+
 package com.ncu.validators;
 import java.io.*;
 import java.util.*;
@@ -6,6 +11,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 public class PathValidator
 {
+
     public static boolean checkPath(String path)
     {
     	Properties prop = new Properties();
@@ -20,7 +26,7 @@ public class PathValidator
         }    
         catch (PathInvalidException e)
         {
-         	logger.error("\n"+e+(prop.getProperty("pathInvalidMessage"))+"\n");
+         	logger.error("\n"+e+(prop.getProperty("pathInvalidMessage"))+"\n");       //displays message as in exception.properties
           	return false;
         }
         
@@ -32,10 +38,12 @@ public class PathValidator
         return true;
     }
     
+    /* method to validate path*/
+
     public static void pathExist(String srcpath) throws PathInvalidException
     {
         File dir = new File(srcpath);
-        if (!(dir.isDirectory()))
-            throw new PathInvalidException ("");
+        if (!(dir.isDirectory()))       //returns true if directory exists
+            throw new PathInvalidException ("");        // throws exception
     }
 }

@@ -1,3 +1,8 @@
+/*
+Author: Aashima, Aditya, Akshay, Anmol Nagpal, Anmol Sarpal
+Project: Download Manager
+*/
+
 package com.ncu.validators;
 import com.ncu.exceptions.*;
 import java.io.*;
@@ -43,7 +48,7 @@ public class URLValidator
 			return false;
 		}
 
-		catch (Exception e) 	
+		catch (Exception e)		//to catch any unreported exception
 		{
 			logger.error("\n"+e.getMessage()+"\n");
 			return false;
@@ -52,6 +57,9 @@ public class URLValidator
 		return true;
 	}
 	
+
+	//method to check if url is valid
+
 	public void urlExist (String url) throws URLException
 	{
 		int responseCode=0;
@@ -59,8 +67,8 @@ public class URLValidator
 		try
 		{
 			URL urlfinal = new URL(url);
-			huc = (HttpURLConnection) urlfinal.openConnection();
-			responseCode = huc.getResponseCode();
+			huc = (HttpURLConnection) urlfinal.openConnection();		// esatblishes the connection to url
+			responseCode = huc.getResponseCode();		// gets response code (not valid if =404)
 		}
 		catch (Exception e)
 		{
